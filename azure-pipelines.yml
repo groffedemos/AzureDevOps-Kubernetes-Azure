@@ -79,6 +79,7 @@ stages:
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
           - task: Kubernetes@1
+            displayName: 'Listar histórico de deployments no Kubernetes'
             inputs:
               connectionType: 'Kubernetes Service Connection'
               kubernetesServiceEndpoint: 'AKSCluster-testes2'
@@ -86,3 +87,4 @@ stages:
               command: 'rollout history deployments -n $(namespaceK8s)'
               secretType: 'dockerRegistry'
               containerRegistryType: 'Azure Container Registry'
+              versionSpec: '1.21'
