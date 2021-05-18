@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sitepos01805 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sitepos01805
+  template:
+    metadata:
+      labels:
+        app: sitepos01805 
+    spec:
+      containers:
+        - name: sitepos01805 
+          image: anpazdevops.azurecr.io/sitepos01805
+          ports:
+          - containerPort: 80
