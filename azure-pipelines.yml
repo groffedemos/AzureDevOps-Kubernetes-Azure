@@ -88,4 +88,3 @@ stages:
               arguments: 'deployments'
               secretType: 'dockerRegistry'
               containerRegistryType: 'Azure Container Registry'
-              versionSpec: '1.21.1'
