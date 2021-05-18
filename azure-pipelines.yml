@@ -87,4 +87,4 @@ stages:
               command: 'rollout history deployments -n $(namespaceK8s)'
               secretType: 'dockerRegistry'
               containerRegistryType: 'Azure Container Registry'
-              versionSpec: '1.21'
+              versionSpec: '1.21.1'
